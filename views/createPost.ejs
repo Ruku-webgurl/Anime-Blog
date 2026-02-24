@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="bg-black text-white p-10">
+
+<h1 class="text-4xl mb-6 flex justify-center">Create Anime Post</h1>
+<div class="max-w-2xl mx-auto bg-gray-900 p-6 rounded">
+<form class="flex flex-col gap-4" action="/create" method="POST" enctype="multipart/form-data">
+
+<div>
+<label class="block text-sm font-bold mb-2">Title</label>
+<input class="w-full p-2 rounded bg-gray-800 text-white border border-gray-700 mb-4" name="title" placeholder="Anime title" required/>
+
+<label class="block text-sm font-bold mb-2">Content</label>
+<textarea class="w-full p-2 rounded bg-gray-800 text-white border border-gray-700 mb-4 h-40" name="content" placeholder="Write your post content..." required></textarea>
+
+<label class="block text-sm font-bold mb-2">Upload Image</label>
+<input class="w-full p-2 rounded bg-gray-800 text-white border border-gray-700 mb-4" type="file" name="image" required/>
+
+<button class="px-4 py-2 rounded bg-blue-500 hover:bg-blue-600">Create Post</button>
+        
+</div>
+</form>
+</div>
+</body>
+
+</html>
