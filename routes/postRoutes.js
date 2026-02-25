@@ -36,11 +36,11 @@ router.post("/create", isAuth, upload.single("image"), async (req,res)=>{
 })
 
 
-router.get("/", async (req,res)=>{
+router.get("/", async (req, res) => {
 
  const posts = await Post.find().populate("user")
 
- res.render("index", {posts, user})
+ res.render("index", { posts, user: res.locals.user })
 
 })
 
