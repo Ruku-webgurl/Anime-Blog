@@ -17,10 +17,10 @@
       <% if (user) { %>
         <span class="text-gray-300">Welcome <%= user.name %></span>
         <a href="/create" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">+ Create Post</a>
-        <a href="/logout" class="px-4 py-2 text-red-400 hover:text-red-300">Logout</a>
+        <a href="/auth/logout" class="px-4 py-2 text-red-400 hover:text-red-300">Logout</a>
       <% } else { %>
-        <a href="/login" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">Login</a>
-        <a href="/register" class="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600">Register</a>
+        <a href="/auth/login" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">Login</a>
+        <a href="/auth/register" class="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600">Register</a>
       <% } %>
     </div>
   </div>

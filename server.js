@@ -9,6 +9,7 @@ import express from 'express'
 import User from './model/user.js'
 import authRoutes from './routes/authRoutes.js'
 import postRoutes from './routes/postRoutes.js'
+// import createPost from './routes/createPost.js'
 import { fileURLToPath } from "url"
 
 const app = express()
@@ -67,8 +68,9 @@ app.set("views", path.join(__dirname, "views"))
 
 
 app.use(express.static("uploads"))
-app.use('/', authRoutes)
+app.use('/auth', authRoutes)
 app.use('/', postRoutes)
+// app.use('/post', postRoutes)
 
 
 
