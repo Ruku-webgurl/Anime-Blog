@@ -29,10 +29,8 @@ app.use(session({
  saveUninitialized: false,
 
  store: MongoStore.create({
-
-   mongoUrl: process.env.MONGO_URI
-
- })
+  mongoUrl: process.env.MONGO_URI
+})
 
 }))
 
